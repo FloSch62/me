@@ -1,0 +1,7 @@
+packages:
+  - '.'
+
+# Supply-chain guard: only install package versions published at least 24h ago.
+# Matches the policy CI enforces, so local resolution never produces a lockfile
+# that the Pages deploy rejects.
+minimumReleaseAge: 1440
