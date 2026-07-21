@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 · Florian Schwarz</title>
+    <meta name="robots" content="noindex" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #fafafa;
+        --paper: #ffffff;
+        --border: rgba(0, 0, 0, 0.08);
+        --text: #1c1c21;
+        --muted: #6e6e78;
+        --accent: #0d9488;
+        --link: #3b66f5;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1b1b1f;
+          --paper: #232328;
+          --border: rgba(255, 255, 255, 0.08);
+          --text: #e6e6ea;
+          --muted: #9d9da7;
+          --accent: #2dd4bf;
+          --link: #6e8bfb;
+        }
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+      main {
+        background: var(--paper);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 24px 28px;
+        margin: 16px;
+        max-width: 560px;
+        width: 100%;
+        font-size: 13px;
+        line-height: 1.9;
+      }
+      .dots {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 14px;
+      }
+      .dots span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+      .prompt {
+        color: var(--accent);
+      }
+      .muted {
+        color: var(--muted);
+      }
+      a {
+        color: var(--link);
+      }
+      pre {
+        margin: 0;
+        font: inherit;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="dots">
+        <span style="background: #f87171"></span>
+        <span style="background: #e7b341"></span>
+        <span style="background: #4ade80"></span>
+      </div>
+      <pre><span class="prompt">$ </span>traceroute to-this-page
+<span class="muted"> 1  gateway      0.412 ms
+ 2  spine-1      0.980 ms
+ 3  * * *
+ 4  * * *</span>
+<span class="prompt">$ </span>echo $?
+404
+<span class="muted"># the page you asked for was dropped somewhere in the fabric.</span>
+<span class="prompt">$ </span><a id="home" href="/">cd ~</a></pre>
+    </main>
+    <script>
+      // On github.io the site lives under /me/, on the custom domain under /.
+      document.getElementById('home').href = location.hostname.endsWith('github.io') ? '/me/' : '/'
+    </script>
+  </body>
+</html>

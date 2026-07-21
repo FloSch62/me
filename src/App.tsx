@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Section from './components/Section'
 import TopBar from './components/TopBar'
+import Topology from './components/Topology'
 import { edaLabsProjects, ownProjects, srlLabsProjects } from './data/projects'
 import { buildTheme } from './theme'
 
@@ -32,7 +33,8 @@ export default function App() {
       <CssBaseline />
       <TopBar mode={mode} onToggleMode={toggleMode} />
       <Container maxWidth="lg" component="main" sx={{ pb: 4 }}>
-        <Hero />
+        <Hero mode={mode} onToggleMode={toggleMode} />
+        <Topology />
         <Section
           id="containerlab"
           title="The containerlab ecosystem"

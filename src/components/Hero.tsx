@@ -1,20 +1,18 @@
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import Avatar from '@mui/material/Avatar'
-import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
-import Paper from '@mui/material/Paper'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 import { links } from '../data/projects'
+import Terminal from './Terminal'
 
-const terminalLines: Array<{ cmd: string; out: string[] }> = [
-  { cmd: 'whoami', out: ['flosch, network automation @ nokia'] },
-  { cmd: 'ls ~/github', out: ['srl-labs/   eda-labs/   FloSch62/'] },
-  { cmd: 'git shortlog -sn --all', out: ['3,000+ commits, all in the open'] },
-]
+interface HeroProps {
+  mode: 'light' | 'dark'
+  onToggleMode: () => void
+}
 
-export default function Hero() {
+export default function Hero({ mode, onToggleMode }: HeroProps) {
   return (
     <Stack component="section" spacing={2} sx={{ alignItems: 'center', textAlign: 'center', mt: 6 }}>
       <Avatar
@@ -52,41 +50,7 @@ export default function Hero() {
           LinkedIn
         </Button>
       </Stack>
-      <Paper
-        variant="outlined"
-        sx={{
-          mt: 3,
-          px: 2.5,
-          py: 2,
-          textAlign: 'left',
-          width: '100%',
-          maxWidth: 460,
-          fontFamily: '"JetBrains Mono Variable", monospace',
-          fontSize: 13,
-          lineHeight: 1.9,
-        }}
-      >
-        <Stack direction="row" spacing={0.75} sx={{ mb: 1.5 }}>
-          {['#f87171', '#e7b341', '#4ade80'].map((dot) => (
-            <Box key={dot} sx={{ width: 10, height: 10, borderRadius: '50%', bgcolor: dot }} />
-          ))}
-        </Stack>
-        {terminalLines.map(({ cmd, out }) => (
-          <Box key={cmd}>
-            <Typography component="div" sx={{ font: 'inherit' }}>
-              <Box component="span" sx={{ color: 'secondary.main' }}>
-                ${' '}
-              </Box>
-              {cmd}
-            </Typography>
-            {out.map((line) => (
-              <Typography key={line} component="div" color="text.secondary" sx={{ font: 'inherit' }}>
-                {line}
-              </Typography>
-            ))}
-          </Box>
-        ))}
-      </Paper>
+      <Terminal mode={mode} onToggleMode={onToggleMode} />
     </Stack>
   )
 }

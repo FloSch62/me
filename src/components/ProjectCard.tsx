@@ -35,6 +35,22 @@ export default function ProjectCard({ project }: { project: Project }) {
           <Typography variant="body2" color="text.secondary" sx={{ flexGrow: 1 }}>
             {project.description}
           </Typography>
+          {project.story && (
+            <Typography
+              variant="caption"
+              sx={{
+                fontFamily: '"JetBrains Mono Variable", monospace',
+                fontSize: 11.5,
+                lineHeight: 1.5,
+                color: 'text.secondary',
+              }}
+            >
+              <Box component="span" sx={{ color: 'secondary.main' }}>
+                {'# '}
+              </Box>
+              {project.story}
+            </Typography>
+          )}
           <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
             <Chip label={project.language} variant="outlined" />
             <Box sx={{ flexGrow: 1 }} />
