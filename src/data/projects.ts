@@ -16,6 +16,7 @@ import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined'
 import SportsEsportsOutlinedIcon from '@mui/icons-material/SportsEsportsOutlined'
 import StorageOutlinedIcon from '@mui/icons-material/StorageOutlined'
 import TerminalOutlinedIcon from '@mui/icons-material/TerminalOutlined'
+import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined'
 
 export interface Project {
   name: string
@@ -57,6 +58,16 @@ export const srlLabsProjects: Project[] = [
     href: 'https://github.com/srl-labs/containerlab-app',
     language: 'TypeScript',
     icon: DesktopWindowsOutlinedIcon,
+  },
+  {
+    name: 'clab-ui',
+    description:
+      'Shared React UI and topology editing engine behind vscode-containerlab and containerlab-app.',
+    story: 'Build the editor once, ship it in every containerlab frontend.',
+    role: 'Lead developer',
+    href: 'https://github.com/srl-labs/clab-ui',
+    language: 'TypeScript',
+    icon: WidgetsOutlinedIcon,
   },
   {
     name: 'clab-api-server',
