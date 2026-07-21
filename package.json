@@ -1,0 +1,8 @@
+{
+  "name": "me",
+  "private": true,
+  "scripts": {
+    "dev": "uvx --native-tls zensical serve --open",
+    "build": "uvx --native-tls zensical build --clean"
+  }
+}
