@@ -9,9 +9,9 @@ import Typography from '@mui/material/Typography'
 import { links } from '../data/projects'
 
 const terminalLines: Array<{ cmd: string; out: string[] }> = [
-  { cmd: 'whoami', out: ['florian — network automation @ nokia'] },
+  { cmd: 'whoami', out: ['flosch, network automation @ nokia'] },
   { cmd: 'ls ~/github', out: ['srl-labs/   eda-labs/   FloSch62/'] },
-  { cmd: 'git shortlog -sn --all', out: ['3,000+ commits · all of it open source'] },
+  { cmd: 'git shortlog -sn --all', out: ['3,000+ commits, all in the open'] },
 ]
 
 export default function Hero() {
@@ -22,13 +22,15 @@ export default function Hero() {
         alt="Portrait of Florian Schwarz"
         sx={{ width: 160, height: 160, boxShadow: 4 }}
       />
-      <Typography variant="h1">Hi, I'm Florian 👋</Typography>
+      <Typography variant="h1">Hi, I'm FloSch</Typography>
       <Typography variant="subtitle1" color="text.secondary">
-        Network automation engineer at <strong>Nokia</strong> · Stuttgart, Germany
+        aka Florian Schwarz · Network automation engineer at <strong>Nokia</strong> · Stuttgart,
+        Germany
       </Typography>
       <Typography sx={{ maxWidth: '58ch' }}>
-        By day I automate data-center networks at Nokia. Everything else I build is open source —
-        developer tooling for containerlab, Nokia EDA and Kubernetes.
+        I automate data-center networks at Nokia and build the tooling for it in the open:
+        containerlab in srl-labs, the Nokia EDA ecosystem in eda-labs, and my own apps like Kubus.
+        Open source isn't something I do next to the job, it's how the work gets done.
       </Typography>
       <Stack direction="row" spacing={1.5} sx={{ pt: 1 }}>
         <Button

@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Section from './components/Section'
 import TopBar from './components/TopBar'
-import { edaLabsProjects, sideProjects, srlLabsProjects } from './data/projects'
+import { edaLabsProjects, ownProjects, srlLabsProjects } from './data/projects'
 import { buildTheme } from './theme'
 
 type Mode = 'light' | 'dark'
@@ -38,7 +38,7 @@ export default function App() {
           title="The containerlab ecosystem"
           lead={
             <>
-              I'm a maintainer in the srl-labs organization — home of containerlab, which spins up
+              I'm a maintainer in the srl-labs organization, home of containerlab, which spins up
               container-based networking labs from topology files defined as code. Most of my work
               there is the developer tooling around it.
             </>
@@ -47,23 +47,26 @@ export default function App() {
         />
         <Section
           id="eda"
-          title="Nokia EDA community"
+          title="Nokia EDA"
           lead={
             <>
-              eda-labs is the community org around Nokia EDA — Event-Driven Automation, a
-              declarative, intent-based platform for data-center fabrics. With 1,100+ commits I'm
-              one of its most active contributors.
+              Nokia EDA, our Event-Driven Automation platform for data-center fabrics, grows its
+              ecosystem in the open at eda-labs. With 1,100+ commits I'm one of the most active
+              contributors there.
             </>
           }
           projects={edaLabsProjects}
         />
         <Section
-          id="side-projects"
-          title="Side projects"
+          id="projects"
+          title="Apps and tools"
           lead={
-            <>The rest of what I build on my own time — from Kubernetes GUIs to DOOM on a router.</>
+            <>
+              Projects from my own GitHub, from a full multi-cluster Kubernetes GUI to DOOM on a
+              router.
+            </>
           }
-          projects={sideProjects}
+          projects={ownProjects}
         />
       </Container>
       <Footer />

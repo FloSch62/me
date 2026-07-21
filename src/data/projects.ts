@@ -5,15 +5,14 @@ import CableOutlinedIcon from '@mui/icons-material/CableOutlined'
 import ChecklistOutlinedIcon from '@mui/icons-material/ChecklistOutlined'
 import DesktopWindowsOutlinedIcon from '@mui/icons-material/DesktopWindowsOutlined'
 import DnsOutlinedIcon from '@mui/icons-material/DnsOutlined'
-import DvrOutlinedIcon from '@mui/icons-material/DvrOutlined'
 import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined'
 import ExtensionOutlinedIcon from '@mui/icons-material/ExtensionOutlined'
 import FactCheckOutlinedIcon from '@mui/icons-material/FactCheckOutlined'
 import HubOutlinedIcon from '@mui/icons-material/HubOutlined'
 import LanOutlinedIcon from '@mui/icons-material/LanOutlined'
 import ManageSearchOutlinedIcon from '@mui/icons-material/ManageSearchOutlined'
+import MapOutlinedIcon from '@mui/icons-material/MapOutlined'
 import MonitorHeartOutlinedIcon from '@mui/icons-material/MonitorHeartOutlined'
-import QueryStatsOutlinedIcon from '@mui/icons-material/QueryStatsOutlined'
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined'
 import SportsEsportsOutlinedIcon from '@mui/icons-material/SportsEsportsOutlined'
 import StorageOutlinedIcon from '@mui/icons-material/StorageOutlined'
@@ -26,13 +25,14 @@ export interface Project {
   href: string
   language: string
   icon: SvgIconComponent
+  featured?: boolean
 }
 
 export const srlLabsProjects: Project[] = [
   {
     name: 'containerlab',
     description:
-      'Deploy container-based networking labs from declarative topology files — the flagship of the srl-labs ecosystem.',
+      'Deploy container-based networking labs from declarative topology files. The flagship of the srl-labs ecosystem.',
     role: 'Maintainer',
     href: 'https://github.com/srl-labs/containerlab',
     language: 'Go',
@@ -41,7 +41,7 @@ export const srlLabsProjects: Project[] = [
   {
     name: 'vscode-containerlab',
     description:
-      'The official Containerlab extension for VS Code — deploy, visualize and manage labs straight from the editor.',
+      'The official Containerlab extension for VS Code: deploy, visualize and manage labs straight from the editor.',
     role: 'Lead developer',
     href: 'https://github.com/srl-labs/vscode-containerlab',
     language: 'TypeScript',
@@ -65,7 +65,7 @@ export const srlLabsProjects: Project[] = [
   },
   {
     name: 'clab-io-draw',
-    description: 'Convert containerlab topologies into draw.io diagrams — and back.',
+    description: 'Convert containerlab topologies into draw.io diagrams, and back.',
     role: 'Lead developer',
     href: 'https://github.com/srl-labs/clab-io-draw',
     language: 'Python',
@@ -84,7 +84,7 @@ export const srlLabsProjects: Project[] = [
 export const edaLabsProjects: Project[] = [
   {
     name: 'vscode-eda',
-    description: 'The EDA extension for VS Code — browse, edit and apply intent-based resources from the editor.',
+    description: 'The EDA extension for VS Code: browse, edit and apply intent-based resources from the editor.',
     role: 'Lead developer',
     href: 'https://github.com/eda-labs/vscode-eda',
     language: 'TypeScript',
@@ -107,20 +107,20 @@ export const edaLabsProjects: Project[] = [
     icon: MonitorHeartOutlinedIcon,
   },
   {
+    name: 'cable-map',
+    description: 'Live topology and cabling view for EDA: canvas, front panels, cable tables and exports.',
+    role: 'Lead developer',
+    href: 'https://github.com/eda-labs/cable-map',
+    language: 'TypeScript',
+    icon: MapOutlinedIcon,
+  },
+  {
     name: 'wsl-eda',
     description: 'A ready-to-use WSL distribution for running Nokia EDA on Windows.',
     role: 'Maintainer',
     href: 'https://github.com/eda-labs/wsl-eda',
     language: 'Shell',
     icon: TerminalOutlinedIcon,
-  },
-  {
-    name: 'eda-tui',
-    description: 'A terminal UI for exploring and operating Nokia EDA.',
-    role: 'Creator',
-    href: 'https://github.com/eda-labs/eda-tui',
-    language: 'Python',
-    icon: DvrOutlinedIcon,
   },
   {
     name: 'eda-netbox-lab',
@@ -132,31 +132,26 @@ export const edaLabsProjects: Project[] = [
   },
 ]
 
-export const sideProjects: Project[] = [
+export const ownProjects: Project[] = [
   {
     name: 'Kubus',
-    description: 'A free, open-source multi-cluster Kubernetes GUI for Windows, macOS and Linux.',
+    description:
+      'A free, open-source multi-cluster Kubernetes GUI for Windows, macOS and Linux. Browse every resource across all your clusters at once, stream logs, open shells, forward ports, watch metrics and manage Helm.',
     role: 'Creator',
     href: 'https://github.com/FloSch62/Kubus',
     language: 'TypeScript',
     icon: HubOutlinedIcon,
-  },
-  {
-    name: 'flow-analyzer',
-    description:
-      'EDA operator app: sFlow collector, embedded time-series store and a live React dashboard in a single Go binary.',
-    role: 'Creator',
-    href: 'https://github.com/FloSch62/flow-analyzer',
-    language: 'Go',
-    icon: QueryStatsOutlinedIcon,
+    featured: true,
   },
   {
     name: 'recall',
-    description: 'Turn markdown files into study decks — spaced repetition, quizzes and quest mode in the browser.',
+    description:
+      'Turn markdown files into study decks in the browser: spaced repetition, quizzes and a quest mode for learning.',
     role: 'Creator',
     href: 'https://github.com/FloSch62/recall',
     language: 'TypeScript',
     icon: SchoolOutlinedIcon,
+    featured: true,
   },
   {
     name: 'srl-games',

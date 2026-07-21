@@ -24,7 +24,7 @@ export default function Section({ id, title, lead, projects }: SectionProps) {
       </Typography>
       <Grid container spacing={2}>
         {projects.map((project) => (
-          <Grid key={project.name} size={{ xs: 12, sm: 6, md: 4 }}>
+          <Grid key={project.name} size={project.featured ? { xs: 12, md: 6 } : { xs: 12, sm: 6, md: 4 }}>
             <ProjectCard project={project} />
           </Grid>
         ))}
