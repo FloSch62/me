@@ -11,7 +11,6 @@ import FactCheckOutlinedIcon from '@mui/icons-material/FactCheckOutlined'
 import HubOutlinedIcon from '@mui/icons-material/HubOutlined'
 import LanOutlinedIcon from '@mui/icons-material/LanOutlined'
 import ManageSearchOutlinedIcon from '@mui/icons-material/ManageSearchOutlined'
-import MapOutlinedIcon from '@mui/icons-material/MapOutlined'
 import MonitorHeartOutlinedIcon from '@mui/icons-material/MonitorHeartOutlined'
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined'
 import SportsEsportsOutlinedIcon from '@mui/icons-material/SportsEsportsOutlined'
@@ -105,14 +104,6 @@ export const edaLabsProjects: Project[] = [
     href: 'https://github.com/eda-labs/eda-telemetry-lab',
     language: 'Shell',
     icon: MonitorHeartOutlinedIcon,
-  },
-  {
-    name: 'cable-map',
-    description: 'Live topology and cabling view for EDA: canvas, front panels, cable tables and exports.',
-    role: 'Lead developer',
-    href: 'https://github.com/eda-labs/cable-map',
-    language: 'TypeScript',
-    icon: MapOutlinedIcon,
   },
   {
     name: 'wsl-eda',

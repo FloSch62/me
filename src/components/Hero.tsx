@@ -24,13 +24,13 @@ export default function Hero() {
       />
       <Typography variant="h1">Hi, I'm FloSch</Typography>
       <Typography variant="subtitle1" color="text.secondary">
-        aka Florian Schwarz · Network automation engineer at <strong>Nokia</strong> · Stuttgart,
+        aka Florian Schwarz · Network automation engineer at <strong>Nokia</strong> ·
         Germany
       </Typography>
       <Typography sx={{ maxWidth: '58ch' }}>
         I automate data-center networks at Nokia and build the tooling for it in the open:
         containerlab in srl-labs, the Nokia EDA ecosystem in eda-labs, and my own apps like Kubus.
-        Open source isn't something I do next to the job, it's how the work gets done.
+        Open source is how the work gets done.
       </Typography>
       <Stack direction="row" spacing={1.5} sx={{ pt: 1 }}>
         <Button
