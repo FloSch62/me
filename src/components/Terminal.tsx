@@ -20,7 +20,7 @@ interface Line {
 const bootScript: Array<{ cmd: string; out: string[] }> = [
   { cmd: 'whoami', out: ['flosch, network automation @ nokia'] },
   { cmd: 'ls ~/github', out: ['srl-labs/   eda-labs/   FloSch62/'] },
-  { cmd: 'git shortlog -sn --all', out: ['3,000+ commits, all in the open'] },
+  { cmd: 'clab deploy -t flosch.clab.yml', out: ['lab is up. topology below.'] },
 ]
 
 const bootHint = "# this shell is real. type 'help' to look around."

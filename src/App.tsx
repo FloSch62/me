@@ -2,6 +2,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 import Container from '@mui/material/Container'
 import { ThemeProvider } from '@mui/material/styles'
 import { useMemo, useState } from 'react'
+import About from './components/About'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Section from './components/Section'
@@ -34,6 +35,7 @@ export default function App() {
       <TopBar mode={mode} onToggleMode={toggleMode} />
       <Container maxWidth="lg" component="main" sx={{ pb: 4 }}>
         <Hero mode={mode} onToggleMode={toggleMode} />
+        <About />
         <Topology />
         <Section
           id="containerlab"
@@ -53,8 +55,8 @@ export default function App() {
           lead={
             <>
               Nokia EDA, our Event-Driven Automation platform for data-center fabrics, grows its
-              ecosystem in the open at eda-labs. With 1,100+ commits I'm one of the most active
-              contributors there.
+              ecosystem in the open at eda-labs. My corner of it is the editor tooling, the
+              connectors and the labs.
             </>
           }
           projects={edaLabsProjects}

@@ -9,6 +9,8 @@ const darkColors = {
   divider: 'rgba(255, 255, 255, 0.08)',
   textPrimary: '#e6e6ea',
   textSecondary: '#9d9da7',
+  scrollThumb: 'rgba(255, 255, 255, 0.16)',
+  scrollThumbHover: 'rgba(255, 255, 255, 0.30)',
 }
 
 const lightColors = {
@@ -19,6 +21,8 @@ const lightColors = {
   divider: 'rgba(0, 0, 0, 0.08)',
   textPrimary: '#1c1c21',
   textSecondary: '#6e6e78',
+  scrollThumb: 'rgba(0, 0, 0, 0.18)',
+  scrollThumbHover: 'rgba(0, 0, 0, 0.34)',
 }
 
 export function buildTheme(mode: 'light' | 'dark'): Theme {
@@ -45,6 +49,20 @@ export function buildTheme(mode: 'light' | 'dark'): Theme {
     components: {
       MuiCssBaseline: {
         styleOverrides: {
+          '*': {
+            scrollbarWidth: 'thin',
+            scrollbarColor: `${c.scrollThumb} transparent`,
+          },
+          '*::-webkit-scrollbar': { width: 10, height: 10 },
+          '*::-webkit-scrollbar-track': { background: 'transparent' },
+          '*::-webkit-scrollbar-thumb': {
+            backgroundColor: c.scrollThumb,
+            borderRadius: 8,
+            border: '2px solid transparent',
+            backgroundClip: 'content-box',
+            '&:hover': { backgroundColor: c.scrollThumbHover },
+          },
+          '*::-webkit-scrollbar-corner': { background: 'transparent' },
           '::selection': { backgroundColor: alpha(c.primary, 0.3) },
         },
       },
