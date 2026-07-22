@@ -471,7 +471,7 @@ export default function Terminal({ mode, onToggleMode }: TerminalProps) {
           <Box key={dot} sx={{ width: 10, height: 10, borderRadius: '50%', bgcolor: dot }} />
         ))}
       </Stack>
-      <Box ref={scrollRef} sx={{ maxHeight: 330, overflowY: 'auto', overscrollBehavior: 'contain' }}>
+      <Box ref={scrollRef} sx={{ height: 264, overflowY: 'auto', overscrollBehavior: 'contain' }}>
         {lines.map((line) => (
           <Typography
             key={line.id}

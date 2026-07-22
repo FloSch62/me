@@ -144,6 +144,15 @@ export const edaLabsProjects: Project[] = [
     language: 'Python',
     icon: StorageOutlinedIcon,
   },
+  {
+    name: 'topo-builder',
+    description: 'Graphically create NetworkTopology workflows for Nokia EDA.',
+    story: 'Complex fabric intent is easier to build when you can see it.',
+    role: 'Maintainer',
+    href: 'https://github.com/eda-labs/topo-builder',
+    language: 'TypeScript',
+    icon: AccountTreeOutlinedIcon,
+  },
 ]
 
 export const ownProjects: Project[] = [
